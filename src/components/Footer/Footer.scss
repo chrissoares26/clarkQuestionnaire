@@ -1,0 +1,24 @@
+@import "../../assets/styles/mixins";
+
+.Footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 5vh;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  color: white;
+
+  &__Link {
+    text-decoration: none;
+  }
+
+  .Link {
+    &__Image {
+      display: block;
+      width: 100px;
+      padding: 0.5rem;
+      margin: auto;
+    }
+  }
+}

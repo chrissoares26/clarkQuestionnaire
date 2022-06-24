@@ -1,0 +1,132 @@
+@import "../../assets/styles/mixins";
+
+.Questionnaire {
+  position: relative;
+  height: calc(100vh - 43px);
+  overflow: hidden;
+
+  &__Intro {
+    min-height: calc(100vh);
+    padding: 0 30px;
+    color: #fff;
+    text-align: center;
+    word-break: break-all;
+  }
+
+  .Intro {
+    &__Name,
+    &__Description {
+      text-align: center;
+    }
+
+    &__BtnStart {
+      // position: absolute;
+      // top: 50%;
+      // left: 25%;
+      display: block;
+      margin: 200px auto;
+      width: 200px;
+      box-sizing: border-box;
+      font-family: inherit;
+      padding: 1rem 1rem;
+      border-radius: 1rem;
+      border: 1px solid #8acbfc;
+      background-color: #8acbfc;
+      color: #1b38d4;
+      font-size: 1rem;
+
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        cursor: pointer;
+        background: #add6f6;
+      }
+
+      @include md {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100px;
+      }
+    }
+  }
+
+  &__BtnPrev,
+  &__BtnNext {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    margin-top: -17.5px;
+    background: none;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 0;
+    font-size: 30px;
+    outline: none;
+    cursor: pointer;
+    transition: 250ms;
+
+    &:hover {
+      background: #fff;
+      color: #1b38d4;
+    }
+  }
+
+  &__BtnPrev {
+    left: 10px;
+
+    @include md {
+      left: 35px;
+    }
+  }
+
+  &__BtnNext {
+    right: 10px;
+
+    @include md {
+      right: 35px;
+    }
+  }
+
+  &__BtnFinish {
+    position: absolute;
+    bottom: 300px;
+    left: 50%;
+    width: 100px;
+    margin-left: -50px;
+    box-sizing: border-box;
+    font-family: inherit;
+    padding: 0.8rem 1rem;
+    border-radius: 1rem;
+    border: 1px solid #8acbfc;
+    background-color: #8acbfc;
+    color: #1b38d4;
+    font-size: 1rem;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      cursor: pointer;
+      background: #add6f6;
+    }
+  }
+
+  &__FinishText {
+    margin-top: 40vh;
+    font-size: 3rem;
+    color: #fff;
+    text-align: center;
+    align-items: center;
+  }
+}
